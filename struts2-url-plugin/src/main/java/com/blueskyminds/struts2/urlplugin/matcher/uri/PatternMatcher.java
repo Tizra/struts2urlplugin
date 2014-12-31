@@ -2,8 +2,6 @@ package com.blueskyminds.struts2.urlplugin.matcher.uri;
 
 import com.blueskyminds.struts2.urlplugin.matcher.MatchContext;
 
-import java.util.List;
-
 /**
  * Simple interface to a pattern matching algorithm
  *

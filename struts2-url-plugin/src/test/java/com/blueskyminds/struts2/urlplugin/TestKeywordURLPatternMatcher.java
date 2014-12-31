@@ -2,8 +2,6 @@ package com.blueskyminds.struts2.urlplugin;
 
 import junit.framework.TestCase;
 
-import java.util.List;
-
 /**
  * Date Started: 22/02/2008
  * <p/>

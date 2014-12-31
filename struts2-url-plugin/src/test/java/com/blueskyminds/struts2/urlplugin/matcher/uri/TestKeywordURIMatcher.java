@@ -3,7 +3,6 @@ package com.blueskyminds.struts2.urlplugin.matcher.uri;
 import junit.framework.TestCase;
 import com.blueskyminds.struts2.urlplugin.configuration.URIPattern;
 import com.blueskyminds.struts2.urlplugin.utils.ComponentURI;
-import com.blueskyminds.struts2.urlplugin.matcher.uri.DefaultURIMatcher;
 import com.blueskyminds.struts2.urlplugin.matcher.uri.keyword.KeywordURIMatcher;
 import com.blueskyminds.struts2.urlplugin.matcher.MatchContext;
 

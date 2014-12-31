@@ -5,9 +5,6 @@ import com.blueskyminds.struts2.urlplugin.matcher.MatchContext;
 
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
-import java.util.List;
-import java.util.LinkedList;
-import java.util.ArrayList;
 
 /**
  * Performs a match using a compiled regular expression

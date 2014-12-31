@@ -1,14 +1,10 @@
 package com.blueskyminds.struts2.urlplugin.matcher.uri.keyword;
 
-import com.blueskyminds.struts2.urlplugin.matcher.uri.regex.RegExPatternMatcher;
-import com.blueskyminds.struts2.urlplugin.matcher.uri.PatternMatcherFactory;
 import com.blueskyminds.struts2.urlplugin.matcher.uri.PatternMatcher;
+import com.blueskyminds.struts2.urlplugin.matcher.uri.PatternMatcherFactory;
 
 import java.util.Map;
-import java.util.HashMap;
-import java.util.Collection;
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * A factory that creates the keyword patterns
@@ -21,21 +17,21 @@ import java.util.regex.Matcher;
  */
 public class KeywordPatternMatcherFactory implements PatternMatcherFactory {
 
-    /** Cached PatternMatchers keyed by pattern */
-    private Map<String, PatternMatcher> cachedMatchers;
+	/** Cached PatternMatchers keyed by pattern */
+	private Map<String, PatternMatcher> cachedMatchers;
 
-    public KeywordPatternMatcherFactory() {
-        cachedMatchers = new HashMap<String, PatternMatcher>();
-    }
+	public KeywordPatternMatcherFactory() {
+		cachedMatchers = new ConcurrentHashMap<String, PatternMatcher>(200, 0.85f, 32);
+	}
 
-    /** Gets a complied pattern */
-    public PatternMatcher get(String pattern) {
-        PatternMatcher patternMatcher = cachedMatchers.get(pattern);
-        if (patternMatcher == null) {
-            patternMatcher = new KeywordPatternMatcher(pattern);
-            cachedMatchers.put(pattern, patternMatcher);
-        }
-        return patternMatcher;
-    }
+	/** Gets a complied pattern */
+	public PatternMatcher get(String pattern) {
+		PatternMatcher patternMatcher = cachedMatchers.get(pattern);
+		if (patternMatcher == null) {
+			patternMatcher = new KeywordPatternMatcher(pattern);
+			cachedMatchers.put(pattern, patternMatcher);
+		}
+		return patternMatcher;
+	}
 
 }

@@ -1,8 +1,5 @@
 package com.blueskyminds.struts20.urlplugin.configuration;
 
-import com.blueskyminds.struts2.urlplugin.matcher.action.MatcherProvider;
-import com.blueskyminds.struts2.urlplugin.matcher.action.namespace.NamespaceMatcher;
-import com.blueskyminds.struts2.urlplugin.matcher.action.name.ActionNameMatcher;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -16,22 +13,22 @@ import java.util.HashMap;
  */
 public class MockMatcherProvider<T> implements MatcherProvider<T> {
 
-    private Map<String, T> matchers;
+	private Map<String, T> matchers;
 
-    public MockMatcherProvider() {
-        matchers = new HashMap<String, T>();
-    }
+	public MockMatcherProvider() {
+		matchers = new HashMap<String, T>();
+	}
 
-    public void addMatcher(String id, T matcher) {
-        matchers.put(id, matcher);
-    }
+	public void addMatcher(String id, T matcher) {
+		matchers.put(id, matcher);
+	}
 
-    /**
-     * Provides the Matcher with the specified Id
-     *
-     * @param id unique id of this matcher.
-     */
-    public T getMatcher(String id) {
-        return matchers.get(id);
-    }
+	/**
+	 * Provides the Matcher with the specified Id
+	 *
+	 * @param id unique id of this matcher.
+	 */
+	public T getMatcher(String id) {
+		return matchers.get(id);
+	}
 }

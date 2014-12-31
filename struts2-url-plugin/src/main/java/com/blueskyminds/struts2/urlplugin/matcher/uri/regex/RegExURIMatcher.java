@@ -3,12 +3,6 @@ package com.blueskyminds.struts2.urlplugin.matcher.uri.regex;
 import com.blueskyminds.struts2.urlplugin.matcher.uri.regex.RegExPatternMatcherFactory;
 import com.blueskyminds.struts2.urlplugin.matcher.uri.DefaultURIMatcher;
 import com.blueskyminds.struts2.urlplugin.matcher.uri.URIMatcher;
-import com.blueskyminds.struts2.urlplugin.matcher.MatchContext;
-import com.blueskyminds.struts2.urlplugin.matcher.MatcherConstants;
-import com.blueskyminds.struts2.urlplugin.utils.ComponentURI;
-import com.blueskyminds.struts2.urlplugin.configuration.URIPattern;
-
-import java.util.Map;
 
 /**
  * Sets up a URIMatcher that treats the method and path as a regular expression

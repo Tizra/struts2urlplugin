@@ -249,9 +249,9 @@ public class URLPatternActionMapper implements ActionMapper {
 
     private void transferParams(ActionMapping actionMapping, Map<String, String> properties) {
         if ((properties != null) && (properties.size() > 0)) {
-            Map<String, String> params = actionMapping.getParams();
+            Map<String, Object> params = actionMapping.getParams();
             if (params == null) {
-                actionMapping.setParams(new HashMap<String, String>(properties));
+                actionMapping.setParams(new HashMap<String, Object>(properties));
             } else {
                 params.putAll(properties);
             }

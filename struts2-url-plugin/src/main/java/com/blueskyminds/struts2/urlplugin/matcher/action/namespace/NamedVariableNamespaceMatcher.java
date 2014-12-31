@@ -4,8 +4,6 @@ import com.blueskyminds.struts2.urlplugin.matcher.MatchContext;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 

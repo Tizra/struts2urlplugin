@@ -1,9 +1,6 @@
 package com.blueskyminds.struts2.urlplugin.matcher;
 
 import com.blueskyminds.struts2.urlplugin.matcher.action.MatcherProvider;
-import com.blueskyminds.struts2.urlplugin.matcher.action.namespace.NamespaceMatcher;
-import com.blueskyminds.struts2.urlplugin.matcher.action.name.ActionNameMatcher;
-
 import java.util.Map;
 import java.util.HashMap;
 
