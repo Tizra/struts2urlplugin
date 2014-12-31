@@ -1,0 +1,15 @@
+Quick start Instructions
+
+1. Add the plugin's jar to your project. It must be deployed in WEB-INF/lib
+
+2. The plugin will be automatically enabled.  In no-configuration mode it uses plain struts 2 mapping (*.action)
+
+3. Modify your struts.xml file to select an alternate configuration file. 
+
+eg.   <constant name="struts.urlplugin.configFile" value="struts-defaultIndex-urls.xml"/>
+
+ The plugin searches the classpath for a configuration file.  Each example demonstrates one of the pre-existing configuration files.
+
+4. The configuration files can be copied from the jar and adapted to suit your project.
+
+
