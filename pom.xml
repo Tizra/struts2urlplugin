@@ -5,7 +5,7 @@
   <groupId>com.blueskyminds.struts2</groupId>
   <artifactId>struts2-url-plugin-parent</artifactId>
   <packaging>pom</packaging>
-  <version>0.1-tizra.4</version>
+  <version>0.1-tizra.5</version>
   <name>Struts2 URL Plugin Parent Module</name>
   <url>http://www.blueskyminds.com.au</url>
 

@@ -5,14 +5,14 @@
   <groupId>com.blueskyminds.struts2.urlplugin</groupId>
   <artifactId>struts2-url-plugin-tests</artifactId>
   <packaging>jar</packaging>
-  <version>0.1-tizra.4</version>
+  <version>0.1-tizra.5</version>
   <name>Base test classes for Plugin Extensions</name>
   <url>http://www.blueskyminds.com.au</url>
   
   <parent>
     <groupId>com.blueskyminds.struts2</groupId>
     <artifactId>struts2-url-plugin-parent</artifactId>
-    <version>0.1-tizra.4</version>
+    <version>0.1-tizra.5</version>
   </parent>
 
   <dependencies>  

@@ -5,7 +5,7 @@
 <groupId>com.blueskyminds.struts2</groupId>
 <artifactId>struts2-url-plugin</artifactId>
 <packaging>jar</packaging>
-<version>0.1-tizra.4</version>
+<version>0.1-tizra.5</version>
 <name>Struts2 URL Plugin</name>
 <url>http://www.blueskyminds.com.au</url>
 

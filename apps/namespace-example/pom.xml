@@ -5,7 +5,7 @@
   <groupId>com.blueskyminds.struts2.urlplugin</groupId>
   <artifactId>namespace-example</artifactId>
   <packaging>war</packaging>
-  <version>0.1-tizra.4</version>
+  <version>0.1-tizra.5</version>
   <name>Example Struts2 WebApp with variables in the namespace</name>
   <url>http://www.blueskyminds.com.au</url>
 
@@ -25,7 +25,7 @@
     <dependency>
       <groupId>com.blueskyminds.struts2</groupId>
       <artifactId>struts2-url-plugin</artifactId>
-      <version>0.1-tizra.4</version>
+      <version>0.1-tizra.5</version>
     </dependency>
   </dependencies>
 </project>
