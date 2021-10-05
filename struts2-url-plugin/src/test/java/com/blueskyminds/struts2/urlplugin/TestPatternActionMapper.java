@@ -1,24 +1,25 @@
 package com.blueskyminds.struts2.urlplugin;
 
-import junit.framework.TestCase;
-import com.opensymphony.xwork2.config.Configuration;
 import com.blueskyminds.struts2.urlplugin.configuration.ActionMapConfiguration;
 import com.blueskyminds.struts2.urlplugin.configuration.MockConfigurationFactory;
-import com.blueskyminds.struts2.urlplugin.matcher.action.name.PlainTextActionNameMatcher;
-import com.blueskyminds.struts2.urlplugin.matcher.action.name.ActionNameMatcher;
-import com.blueskyminds.struts2.urlplugin.matcher.action.DefaultActionMatcher;
+import com.blueskyminds.struts2.urlplugin.configuration.SampleOriginalActionMapConfiguration;
+import com.blueskyminds.struts2.urlplugin.matcher.MockMatcherProvider;
 import com.blueskyminds.struts2.urlplugin.matcher.action.ActionMatcher;
+import com.blueskyminds.struts2.urlplugin.matcher.action.DefaultActionMatcher;
+import com.blueskyminds.struts2.urlplugin.matcher.action.name.ActionNameMatcher;
+import com.blueskyminds.struts2.urlplugin.matcher.action.name.PlainTextActionNameMatcher;
 import com.blueskyminds.struts2.urlplugin.matcher.action.namespace.NamespaceMatcher;
 import com.blueskyminds.struts2.urlplugin.matcher.action.namespace.PlainTextNamespaceMatcher;
-import com.blueskyminds.struts2.urlplugin.URLPatternActionMapper;
-import com.blueskyminds.struts2.urlplugin.utils.ComponentURI;
-import com.blueskyminds.struts2.urlplugin.matcher.*;
-import com.blueskyminds.struts2.urlplugin.matcher.uri.URIMatcher;
 import com.blueskyminds.struts2.urlplugin.matcher.uri.DefaultURIMatcher;
+import com.blueskyminds.struts2.urlplugin.matcher.uri.URIMatcher;
 import com.blueskyminds.struts2.urlplugin.matcher.uri.keyword.KeywordURIMatcher;
 import com.blueskyminds.struts2.urlplugin.matcher.uri.regex.RegExURIMatcher;
-import com.blueskyminds.struts2.urlplugin.configuration.SampleOriginalActionMapConfiguration;
+import com.blueskyminds.struts2.urlplugin.utils.ComponentURI;
+import com.opensymphony.xwork2.config.Configuration;
+
 import org.apache.struts2.dispatcher.mapper.ActionMapping;
+
+import junit.framework.TestCase;
 
 /**
  * Unit tests for the URLPatternActionMapper
@@ -41,13 +42,13 @@ public class TestPatternActionMapper extends TestCase {
         super.setUp();
 
         //setup the MatcherProvider.  The matchers control how to match an ActionConfig
-        actionMatcherProvider = new MockMatcherProvider<ActionNameMatcher>();
+        actionMatcherProvider = new MockMatcherProvider<>();
         actionMatcherProvider.addMatcher(PlainTextActionNameMatcher.DEFAULT_NAME, new PlainTextActionNameMatcher());
 
-        namespaceMatcherProvider = new MockMatcherProvider<NamespaceMatcher>();
+        namespaceMatcherProvider = new MockMatcherProvider<>();
         namespaceMatcherProvider.addMatcher(PlainTextNamespaceMatcher.DEFAULT_NAME, new PlainTextNamespaceMatcher());
 
-        uriMatcherProvider = new MockMatcherProvider<URIMatcher>();
+        uriMatcherProvider = new MockMatcherProvider<>();
         uriMatcherProvider.addMatcher(RegExURIMatcher.DEFAULT_NAME, new RegExURIMatcher());
         uriMatcherProvider.addMatcher(DefaultURIMatcher.DEFAULT_NAME, new DefaultURIMatcher());
         uriMatcherProvider.addMatcher(KeywordURIMatcher.DEFAULT_NAME, new KeywordURIMatcher());
@@ -66,7 +67,7 @@ public class TestPatternActionMapper extends TestCase {
     public void testPackages() {
         URLPatternActionMapper actionMapper = new URLPatternActionMapper(actionMapConfiguration, actionMatcher, uriMatcherProvider);
         ActionMapping mapping = actionMapper.getMapping(new ComponentURI("get", "/example/example.action", null), configuration);
-        
+
         assertNotNull(mapping);
         assertEquals(MockConfigurationFactory.ACTION1_NAME, mapping.getName());
         assertEquals(MockConfigurationFactory.PACKAGE1_NAMESPACE, mapping.getNamespace());

@@ -1,16 +1,17 @@
 package com.blueskyminds.struts2.urlplugin.matcher.configuration;
 
-import junit.framework.TestCase;
+import com.blueskyminds.struts2.urlplugin.matcher.MatchContext;
+import com.blueskyminds.struts2.urlplugin.matcher.uri.PatternMatcher;
 import com.blueskyminds.struts2.urlplugin.matcher.uri.PatternMatcherFactory;
 import com.blueskyminds.struts2.urlplugin.matcher.uri.regex.RegExPatternMatcherFactory;
-import com.blueskyminds.struts2.urlplugin.matcher.uri.PatternMatcher;
-import com.blueskyminds.struts2.urlplugin.matcher.MatchContext;
 
-import java.util.List;
-import java.util.Collection;
-
-import org.apache.commons.logging.LogFactory;
 import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import java.util.Collection;
+import java.util.List;
+
+import junit.framework.TestCase;
 
 /**
  * Unit tests for the default RegEx PatternMatcher
