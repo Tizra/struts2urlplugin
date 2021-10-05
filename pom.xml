@@ -5,14 +5,21 @@
   <groupId>com.blueskyminds.struts2</groupId>
   <artifactId>struts2-url-plugin-parent</artifactId>
   <packaging>pom</packaging>
-  <version>0.1-tizra.5</version>
+  <version>0.1-tizra.6</version>
   <name>Struts2 URL Plugin Parent Module</name>
   <url>http://www.blueskyminds.com.au</url>
 
+  <properties>
+      <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <maven.compiler.target>1.8</maven.compiler.target>
+      <maven.compiler.source>1.8</maven.compiler.source>
+  </properties>
+
   <modules>
     <module>struts2-url-plugin</module>
-    <module>struts20-url-plugin</module>
-    <!--module>struts2-url-plugin-tests</module>
+    <!--<module>struts20-url-plugin</module>
+    module>struts2-url-plugin-tests</module>
     <module>apps</module-->
   </modules>
 
