@@ -12,7 +12,7 @@
   <parent>
     <groupId>com.blueskyminds.struts2</groupId>
     <artifactId>struts2-url-plugin-parent</artifactId>
-    <version>0.1-tizra.5</version>
+    <version>0.1-tizra.10</version>
   </parent>
 
   <!--
