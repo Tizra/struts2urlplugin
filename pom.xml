@@ -5,7 +5,7 @@
   <groupId>com.blueskyminds.struts2</groupId>
   <artifactId>struts2-url-plugin-parent</artifactId>
   <packaging>pom</packaging>
-  <version>0.1-tizra.7</version>
+  <version>0.1-tizra.8</version>
   <name>Struts2 URL Plugin Parent Module</name>
   <url>http://www.blueskyminds.com.au</url>
 
@@ -59,19 +59,12 @@
       <version>3.8.2</version>
       <scope>compile</scope>
     </dependency>
+
     <dependency>
        <groupId>org.apache.struts</groupId>
        <artifactId>struts2-core</artifactId>
-       <version>2.3.37</version>
+       <version>2.5.30</version>
        <scope>compile</scope>
     </dependency>
-
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.2</version>
-      <scope>test</scope>
-    </dependency>
-
   </dependencies>
 </project>
