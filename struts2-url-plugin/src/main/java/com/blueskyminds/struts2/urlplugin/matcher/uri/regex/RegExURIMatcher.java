@@ -1,8 +1,6 @@
 package com.blueskyminds.struts2.urlplugin.matcher.uri.regex;
 
-import com.blueskyminds.struts2.urlplugin.matcher.uri.regex.RegExPatternMatcherFactory;
 import com.blueskyminds.struts2.urlplugin.matcher.uri.DefaultURIMatcher;
-import com.blueskyminds.struts2.urlplugin.matcher.uri.URIMatcher;
 
 /**
  * Sets up a URIMatcher that treats the method and path as a regular expression
@@ -13,7 +11,7 @@ import com.blueskyminds.struts2.urlplugin.matcher.uri.URIMatcher;
  * <p/>
  * History:
  */
-public class RegExURIMatcher extends DefaultURIMatcher implements URIMatcher {
+public class RegExURIMatcher extends DefaultURIMatcher {
 
     public static final String DEFAULT_NAME = "regex";
 

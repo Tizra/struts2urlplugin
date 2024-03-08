@@ -19,7 +19,11 @@ import com.opensymphony.xwork2.config.Configuration;
 
 import org.apache.struts2.dispatcher.mapper.ActionMapping;
 
-import junit.framework.TestCase;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
+import org.junit.jupiter.api.Test;
 
 /**
  * Unit tests for the URLPatternActionMapper
@@ -28,7 +32,7 @@ import junit.framework.TestCase;
  * <p/>
  * History:
  */
-public class TestPatternActionMapper extends TestCase {
+public class TestPatternActionMapper {
 
     private Configuration configuration;
 
@@ -38,8 +42,7 @@ public class TestPatternActionMapper extends TestCase {
     private ActionMatcher actionMatcher;
     private ActionMapConfiguration actionMapConfiguration;
 
-    protected void setUp() throws Exception {
-        super.setUp();
+    public TestPatternActionMapper() {
 
         //setup the MatcherProvider.  The matchers control how to match an ActionConfig
         actionMatcherProvider = new MockMatcherProvider<>();
@@ -64,6 +67,7 @@ public class TestPatternActionMapper extends TestCase {
     /**
      * match an action named 'example' in the /example namespace
      */
+    @Test
     public void testPackages() {
         URLPatternActionMapper actionMapper = new URLPatternActionMapper(actionMapConfiguration, actionMatcher, uriMatcherProvider);
         ActionMapping mapping = actionMapper.getMapping(new ComponentURI("get", "/example/example.action", null), configuration);

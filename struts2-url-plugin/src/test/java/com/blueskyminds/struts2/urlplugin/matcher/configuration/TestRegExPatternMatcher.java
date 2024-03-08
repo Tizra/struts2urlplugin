@@ -11,7 +11,11 @@ import org.apache.commons.logging.LogFactory;
 import java.util.Collection;
 import java.util.List;
 
-import junit.framework.TestCase;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
 
 /**
  * Unit tests for the default RegEx PatternMatcher
@@ -20,20 +24,15 @@ import junit.framework.TestCase;
  * <p/>
  * History:
  */
-public class TestRegExPatternMatcher extends TestCase {
+public class TestRegExPatternMatcher {
 
     private static final Log LOG = LogFactory.getLog(TestRegExPatternMatcher.class);
 
-    private PatternMatcherFactory factory;
-    private MatchContext matchContext;
-
-    protected void setUp() throws Exception {
-        super.setUp();
-        factory = new RegExPatternMatcherFactory();
-        matchContext = new MatchContext();
-    }
+    private PatternMatcherFactory factory = new RegExPatternMatcherFactory();
+    private MatchContext matchContext = new MatchContext();
 
     /** Match everything - no groups */
+    @Test
     public void testMatchNotNull() {
         PatternMatcher matcher = factory.get(".*");
         assertNotNull(matcher.matches("", matchContext));
@@ -43,6 +42,7 @@ public class TestRegExPatternMatcher extends TestCase {
     }
 
     /** Null pattern always succeeds */
+    @Test
     public void testMatchAll() {
         PatternMatcher matcher = factory.get(null);
         assertTrue(matcher.matches("", matchContext));
@@ -52,6 +52,7 @@ public class TestRegExPatternMatcher extends TestCase {
     }
 
     /** A commonly used path */
+    @Test
     public void testMatchPath() {
         PatternMatcher matcher = factory.get("/example/.+");
         assertFalse(matcher.matches("", matchContext));  // no match
@@ -64,6 +65,7 @@ public class TestRegExPatternMatcher extends TestCase {
     }
 
     /** Another commonly used path */
+    @Test
     public void testMatchPath2() {
         PatternMatcher matcher = factory.get("/example/.*");
         assertFalse(matcher.matches("", matchContext));  // no match
@@ -167,6 +169,7 @@ public class TestRegExPatternMatcher extends TestCase {
     }
 
     /** Matches any path containing .action */
+    @Test
     public void testGroup1() {
         PatternMatcher matcher = factory.get("^(.*)/(.*)\\.action$");
         assertFalse(matcher.matches("", matchContext));  // no match

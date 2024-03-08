@@ -5,7 +5,7 @@
   <groupId>com.blueskyminds.struts2.urlplugin</groupId>
   <artifactId>struts20-example</artifactId>
   <packaging>war</packaging>
-  <version>0.1-tizra.5</version>
+  <version>0.1-tizra.12</version>
   <name>Example Struts2.0.x WebApp with index actions</name>
   <url>http://www.blueskyminds.com.au</url>
 
@@ -17,16 +17,16 @@
 
   <dependencies>
 
-   <dependency>
+    <dependency>
       <groupId>org.apache.struts</groupId>
       <artifactId>struts2-core</artifactId>
-      <version>2.5.31</version>
+      <version>6.3.0.2</version>
     </dependency>
 
     <dependency>
       <groupId>com.blueskyminds.struts2</groupId>
       <artifactId>struts20-url-plugin</artifactId>
-      <version>0.1-tizra.5</version>
+      <version>0.1-tizra.12</version>
     </dependency>
   </dependencies>
 </project>

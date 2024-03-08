@@ -13,7 +13,7 @@ import java.io.InputStream;
 import java.io.IOException;
 import java.net.URL;
 
-import org.apache.commons.digester.Digester;
+import org.apache.commons.digester3.Digester;
 import org.apache.commons.logging.LogFactory;
 import org.apache.commons.logging.Log;
 import org.xml.sax.SAXException;

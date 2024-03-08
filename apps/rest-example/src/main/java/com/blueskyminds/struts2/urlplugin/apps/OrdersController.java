@@ -2,9 +2,9 @@ package com.blueskyminds.struts2.urlplugin.apps;
 
 import java.util.Collection;
 
-import org.apache.struts2.config.Result;
-import org.apache.struts2.config.Results;
-import org.apache.struts2.dispatcher.ServletActionRedirectResult;
+import org.apache.struts2.convention.annotation.Result;
+import org.apache.struts2.convention.annotation.Results;
+import org.apache.struts2.result.ServletActionRedirectResult;
 import org.apache.struts2.rest.DefaultHttpHeaders;
 import org.apache.struts2.rest.HttpHeaders;
 
@@ -13,10 +13,10 @@ import com.opensymphony.xwork2.Validateable;
 import com.opensymphony.xwork2.ValidationAwareSupport;
 
 @Results({
-    @Result(name="success", type=ServletActionRedirectResult.class, value="orders") 
+    @Result(name="success", type="redirectAction", location="orders")
 })
 public class OrdersController extends ValidationAwareSupport implements ModelDriven<Object>, Validateable{
-    
+
     private Order model = new Order();
     private String id;
     private Collection<Order> list;
@@ -33,7 +33,7 @@ public class OrdersController extends ValidationAwareSupport implements ModelDri
         return new DefaultHttpHeaders("index")
             .disableCaching();
     }
-    
+
     // GET /orders/1/edit
     public String edit() {
         return "edit";
@@ -84,7 +84,7 @@ public class OrdersController extends ValidationAwareSupport implements ModelDri
         }
         this.id = id;
     }
-    
+
     public Object getModel() {
         return (list != null ? list : model);
     }

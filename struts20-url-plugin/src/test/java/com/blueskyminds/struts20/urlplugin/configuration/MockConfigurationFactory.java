@@ -35,22 +35,23 @@ public class MockConfigurationFactory {
     public static Configuration createConfiguration() {
         // setup a Struts2 configuration
         Configuration configuration = new MockConfiguration();
-        PackageConfig defaultPackage = new PackageConfig(DEFAULT_PACKAGE_NAME, DEFAULT_PACKAGE_NAMESPACE, false);
-
         // Example1Action is used in the default package as well as package1.  The only difference is namespace
-        ActionConfig default1Action = new ActionConfig();
-        default1Action.setClassName(Example1Action.class.getName());
-        defaultPackage.addActionConfig(ACTION1_NAME, default1Action);
+        ActionConfig default1Action = new ActionConfig.Builder("com.blueskyminds.struts20.urlplugin.configuration",
+            "example1", Example1Action.class.getName()).build();
+        PackageConfig defaultPackage = new PackageConfig.Builder(DEFAULT_PACKAGE_NAME)
+                .namespace(DEFAULT_PACKAGE_NAMESPACE).strictMethodInvocation(false)
+                .addActionConfig(ACTION1_NAME, default1Action).build();
 
-        PackageConfig example1Package = new PackageConfig(PACKAGE1_NAME, PACKAGE1_NAMESPACE, false);
-        ActionConfig example1Action = new ActionConfig();
-        example1Action.setClassName(com.blueskyminds.struts20.urlplugin.configuration.Example1Action.class.getName());
-        example1Package.addActionConfig(ACTION1_NAME, example1Action);
 
+        ActionConfig example1Action = new ActionConfig.Builder("com.blueskyminds.struts20.urlplugin.configuration",
+            "example1", Example1Action.class.getName()).build();
         // Example2Action is used only in package1
-        ActionConfig example2Action = new ActionConfig();
-        example2Action.setClassName(Example2Action.class.getName());
-        example1Package.addActionConfig(ACTION2_NAME, example2Action);
+        ActionConfig example2Action = new ActionConfig.Builder("com.blueskyminds.struts20.urlplugin.configuration",
+            "example2", Example2Action.class.getName()).build();
+        PackageConfig example1Package = new PackageConfig.Builder(PACKAGE1_NAME)
+                .namespace(PACKAGE1_NAMESPACE).strictMethodInvocation(false)
+                .addActionConfig(ACTION1_NAME, example1Action)
+                .addActionConfig(ACTION2_NAME, example2Action).build();
 
         configuration.addPackageConfig(DEFAULT_PACKAGE_NAME, defaultPackage);
         configuration.addPackageConfig(PACKAGE1_NAME, example1Package);

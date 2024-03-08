@@ -1,8 +1,5 @@
 package com.blueskyminds.struts2.urlplugin.matcher;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 import java.util.Map;
 import java.util.HashMap;
 import java.util.List;
@@ -21,8 +18,6 @@ import com.blueskyminds.struts2.urlplugin.expression.ExpressionProcessor;
  *       $1 is a reference to group #1  
  */
 public class MatchContext {
-
-    private static final Log LOG = LogFactory.getLog(MatchContext.class);
 
     private ExpressionProcessor expressionProcessor;
 

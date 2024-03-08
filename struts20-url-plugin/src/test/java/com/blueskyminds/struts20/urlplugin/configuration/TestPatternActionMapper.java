@@ -1,6 +1,10 @@
 package com.blueskyminds.struts20.urlplugin.configuration;
 
-import junit.framework.TestCase;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
+import org.junit.jupiter.api.Test;
 import com.opensymphony.xwork2.config.Configuration;
 import com.blueskyminds.struts2.urlplugin.configuration.ActionMapConfiguration;
 import com.blueskyminds.struts2.urlplugin.matcher.action.name.PlainTextActionNameMatcher;
@@ -24,7 +28,7 @@ import org.apache.struts2.dispatcher.mapper.ActionMapping;
  * <p/>
  * History:
  */
-public class TestPatternActionMapper extends TestCase {
+public class TestPatternActionMapper {
 
     private Configuration configuration;
 
@@ -34,9 +38,7 @@ public class TestPatternActionMapper extends TestCase {
     private ActionMatcher actionMatcher;
     private ActionMapConfiguration actionMapConfiguration;
 
-    protected void setUp() throws Exception {
-        super.setUp();
-
+    public TestPatternActionMapper() {
         //setup the MatcherProvider.  The matchers control how to match an ActionConfig
         actionMatcherProvider = new MockMatcherProvider<ActionNameMatcher>();
         actionMatcherProvider.addMatcher(PlainTextActionNameMatcher.DEFAULT_NAME, new PlainTextActionNameMatcher());
@@ -60,6 +62,7 @@ public class TestPatternActionMapper extends TestCase {
     /**
      * match an action named 'example' in the /example namespace
      */
+    @Test
     public void testPackages() {
         URLPatternActionMapper actionMapper = new URLPatternActionMapper(actionMapConfiguration, actionMatcher, uriMatcherProvider);
         ActionMapping mapping = actionMapper.getMapping(new ComponentURI("get", "/example/example.action", null), configuration);

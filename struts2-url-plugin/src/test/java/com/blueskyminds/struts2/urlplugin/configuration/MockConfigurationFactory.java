@@ -4,8 +4,6 @@ import com.opensymphony.xwork2.config.impl.MockConfiguration;
 import com.opensymphony.xwork2.config.entities.PackageConfig;
 import com.opensymphony.xwork2.config.entities.ActionConfig;
 import com.opensymphony.xwork2.config.Configuration;
-import com.blueskyminds.struts2.urlplugin.configuration.Example1Action;
-import com.blueskyminds.struts2.urlplugin.configuration.Example2Action;
 
 /**
  * Used to setup Struts2 configuration for testing

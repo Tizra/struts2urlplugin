@@ -1,8 +1,9 @@
 package com.blueskyminds.struts2.urlplugin.configuration;
 
-import junit.framework.TestCase;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
+import org.junit.jupiter.api.Test;
 import com.blueskyminds.struts2.urlplugin.configuration.digester.XMLActionMapConfiguration;
 import com.blueskyminds.struts2.urlplugin.matcher.MatchContext;
 
@@ -13,15 +14,12 @@ import java.util.List;
  * <p/>
  * History:
  */
-public class TestXMLConfiguration extends TestCase {
+public class TestXMLConfiguration {
 
-    private static final Log LOG = LogFactory.getLog(TestXMLConfiguration.class);
-
+    @Test
     public void testReadConfig() throws Exception {
         XMLActionMapConfiguration configuration = new XMLActionMapConfiguration();
         configuration.setConfiguration("struts-test1-urls.xml");
-
-        MatchContext matchContext = configuration.prepareMatchContext();
 
         List<ActionMapDefinition> actionMappings = configuration.getActionMappings();
         assertEquals(1, actionMappings.size());
@@ -46,8 +44,9 @@ public class TestXMLConfiguration extends TestCase {
         assertEquals(2, pattern2.getParams().size());
         assertEquals("/", pattern2.getParams().get("path"));
         assertEquals("$1", pattern2.getParams().get("name"));
-   }
+    }
 
+    @Test
     public void testReadConfig2() throws Exception {
         XMLActionMapConfiguration configuration = new XMLActionMapConfiguration();
         configuration.setConfiguration("struts-test2-urls.xml");
@@ -81,8 +80,9 @@ public class TestXMLConfiguration extends TestCase {
         ActionSelector firstSelector = selectors.get(0);
         ActionSelector secondSelector = selectors.get(1);
         assertEquals(1, firstSelector.getParams().size());
-   }
+    }
 
+    @Test
     public void testReadConfig3() throws Exception {
         XMLActionMapConfiguration configuration = new XMLActionMapConfiguration();
         configuration.setConfiguration("struts-test3-urls.xml");
@@ -121,5 +121,5 @@ public class TestXMLConfiguration extends TestCase {
         ActionSelector firstSelector = selectors.get(0);
         ActionSelector secondSelector = selectors.get(1);
         assertEquals(1, firstSelector.getParams().size());
-   }
+    }
 }

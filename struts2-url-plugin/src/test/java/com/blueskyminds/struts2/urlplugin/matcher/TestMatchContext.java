@@ -1,18 +1,17 @@
 package com.blueskyminds.struts2.urlplugin.matcher;
 
-import junit.framework.TestCase;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 /**
  * Date Started: 29/01/2008
  * <p/>
  * History:
  */
-public class TestMatchContext extends TestCase {
+public class TestMatchContext {
 
-    private static final Log LOG = LogFactory.getLog(TestMatchContext.class);
-
+    @Test
     public void testGroupMatch() {
 
         MatchContext matchContext = new MatchContext();
@@ -33,6 +32,7 @@ public class TestMatchContext extends TestCase {
     }
 
 
+    @Test
     public void testParamMatch() {
 
         MatchContext matchContext = new MatchContext();

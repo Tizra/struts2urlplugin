@@ -1,9 +1,5 @@
 package com.blueskyminds.struts2.urlplugin.configuration;
 
-import com.blueskyminds.struts2.urlplugin.configuration.ActionMapConfiguration;
-import com.blueskyminds.struts2.urlplugin.configuration.ActionMapDefinition;
-import com.blueskyminds.struts2.urlplugin.configuration.URIPattern;
-import com.blueskyminds.struts2.urlplugin.configuration.ActionSelector;
 import com.blueskyminds.struts2.urlplugin.matcher.MatchContext;
 
 import java.util.List;

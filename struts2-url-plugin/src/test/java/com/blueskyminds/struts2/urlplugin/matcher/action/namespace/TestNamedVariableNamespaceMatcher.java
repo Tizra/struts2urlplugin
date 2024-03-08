@@ -1,6 +1,10 @@
 package com.blueskyminds.struts2.urlplugin.matcher.action.namespace;
 
-import junit.framework.TestCase;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
 import com.blueskyminds.struts2.urlplugin.matcher.MatchContext;
 
 /**
@@ -8,8 +12,9 @@ import com.blueskyminds.struts2.urlplugin.matcher.MatchContext;
  * <p/>
  * History:
  */
-public class TestNamedVariableNamespaceMatcher extends TestCase {
+public class TestNamedVariableNamespaceMatcher {
 
+    @Test
     public void testNamespaceVariables() {
         NamedVariableNamespaceMatcher matcher = new NamedVariableNamespaceMatcher();
         MatchContext matchContext = new MatchContext();
@@ -30,6 +35,7 @@ public class TestNamedVariableNamespaceMatcher extends TestCase {
         assertEquals("test1", matchContext.get("var3"));
     }
 
+    @Test
     public void testNamespaceVariablesWithSlashes() {
         NamedVariableNamespaceMatcher matcher = new NamedVariableNamespaceMatcher();
         MatchContext matchContext = new MatchContext();
