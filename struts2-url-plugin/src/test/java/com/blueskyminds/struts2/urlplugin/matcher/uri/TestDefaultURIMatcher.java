@@ -1,9 +1,11 @@
 package com.blueskyminds.struts2.urlplugin.matcher.uri;
 
-import junit.framework.TestCase;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
 import com.blueskyminds.struts2.urlplugin.configuration.URIPattern;
 import com.blueskyminds.struts2.urlplugin.utils.ComponentURI;
-import com.blueskyminds.struts2.urlplugin.matcher.uri.DefaultURIMatcher;
 import com.blueskyminds.struts2.urlplugin.matcher.MatchContext;
 
 /**
@@ -13,18 +15,12 @@ import com.blueskyminds.struts2.urlplugin.matcher.MatchContext;
  * <p/>
  * History:
  */
-public class TestDefaultURIMatcher extends TestCase {
+public class TestDefaultURIMatcher {
 
-    private DefaultURIMatcher uriMatcher;
-    private MatchContext matchContext;
+    private DefaultURIMatcher uriMatcher = new DefaultURIMatcher();
+    private MatchContext matchContext = new MatchContext();
 
-    protected void setUp() throws Exception {
-        super.setUp();
-
-        uriMatcher = new DefaultURIMatcher();
-        matchContext = new MatchContext();
-    }
-
+    @Test
     public void testMatch() {
         URIPattern uriPattern = new URIPattern("1", "regex", "GET", ".*");
 

@@ -207,7 +207,8 @@ public class URLPatternActionMapper implements ActionMapper {
                                     transferParams(actionMapping, matchContext.evaluateProperties());
 
                                     if (LOG.isDebugEnabled()) {
-                                        Map map = actionMapping.getParams();
+                                        Map<String, Object> map = actionMapping
+                                                .getParams();
                                         LOG.debug("actionMapping.params = {");
                                         for (Object key : map.keySet()) {
                                             LOG.debug("   "+key+":"+map.get(key));

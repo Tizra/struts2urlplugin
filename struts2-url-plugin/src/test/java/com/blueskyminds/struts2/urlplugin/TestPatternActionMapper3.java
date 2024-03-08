@@ -1,6 +1,10 @@
 package com.blueskyminds.struts2.urlplugin;
 
-import junit.framework.TestCase;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
+import org.junit.jupiter.api.Test;
 import com.blueskyminds.struts2.urlplugin.configuration.ActionMapConfiguration;
 import com.blueskyminds.struts2.urlplugin.configuration.MockConfigurationFactory;
 import com.blueskyminds.struts2.urlplugin.configuration.digester.XMLActionMapConfiguration;
@@ -26,7 +30,7 @@ import org.apache.struts2.dispatcher.mapper.ActionMapping;
  * <p/>
  * History:
  */
-public class TestPatternActionMapper3 extends TestCase {
+public class TestPatternActionMapper3 {
 
     private ActionMapConfiguration actionMapConfiguration;
     private Configuration configuration;
@@ -36,9 +40,7 @@ public class TestPatternActionMapper3 extends TestCase {
     private MockMatcherProvider<URIMatcher> uriMatcherProvider;
     private ActionMatcher actionMatcher;
 
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
+    public TestPatternActionMapper3() {
         actionMapConfiguration = new XMLActionMapConfiguration();
         ((XMLActionMapConfiguration) actionMapConfiguration).setConfiguration("struts-test3-urls.xml");
 
@@ -59,6 +61,7 @@ public class TestPatternActionMapper3 extends TestCase {
         configuration = MockConfigurationFactory.createConfiguration();
     }
 
+    @Test
     public void testMapper() {
         URLPatternActionMapper actionMapper = new URLPatternActionMapper(actionMapConfiguration, actionMatcher, uriMatcherProvider);
         ActionMapping mapping = actionMapper.getMapping(new ComponentURI("GET", "/example/example.action", null), configuration);

@@ -50,13 +50,11 @@ public class KeywordPatternMatcher implements PatternMatcher {
         }
     }
 
-    private String keywordPattern;
     private Pattern regExPattern;
     private Map<String, Integer> keywordGroupMap;
 
 
     public KeywordPatternMatcher(String keywordPattern) {
-        this.keywordPattern = keywordPattern;
         keywordGroupMap = new HashMap<String, Integer>();
         
         if (keywordPattern != null) {

@@ -1,5 +1,6 @@
 package com.blueskyminds.struts20.urlplugin.configuration;
 
+import com.blueskyminds.struts2.urlplugin.matcher.action.MatcherProvider;
 
 import java.util.Map;
 import java.util.HashMap;

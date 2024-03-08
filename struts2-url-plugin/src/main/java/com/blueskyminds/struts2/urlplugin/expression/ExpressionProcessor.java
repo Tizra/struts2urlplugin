@@ -125,6 +125,8 @@ public class ExpressionProcessor {
 					// restore the trailing $
 					result.append("$");
 				break;
+			case IN_TEXT:
+				break;
 			}
 
 			if (ExpressionProcessor.LOG.isDebugEnabled()) {

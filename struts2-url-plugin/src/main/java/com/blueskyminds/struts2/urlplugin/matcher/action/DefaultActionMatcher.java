@@ -6,8 +6,6 @@ import org.apache.commons.logging.LogFactory;
 import com.blueskyminds.struts2.urlplugin.configuration.ActionSelector;
 import com.blueskyminds.struts2.urlplugin.matcher.action.namespace.NamespaceMatcher;
 import com.blueskyminds.struts2.urlplugin.matcher.action.name.ActionNameMatcher;
-import com.blueskyminds.struts2.urlplugin.matcher.action.MatcherProvider;
-import com.blueskyminds.struts2.urlplugin.matcher.action.ActionMatcher;
 import com.blueskyminds.struts2.urlplugin.matcher.MatchContext;
 import com.opensymphony.xwork2.config.Configuration;
 import com.opensymphony.xwork2.config.entities.PackageConfig;

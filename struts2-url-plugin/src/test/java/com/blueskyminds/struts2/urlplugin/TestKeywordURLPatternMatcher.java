@@ -1,14 +1,13 @@
 package com.blueskyminds.struts2.urlplugin;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 
 /**
- * Date Started: 22/02/2008
- * <p/>
- * History:
+ * The class this tests hasn't existed in the repo since the import to git.
  */
-public class TestKeywordURLPatternMatcher extends TestCase {
+public class TestKeywordURLPatternMatcher {
 
+    @Test
     public void testKeywordURLPatternMatcher() throws Exception {
 //        KeywordURLPatternMatcher matcher = new KeywordURLPatternMatcher("${namespace}/${action}${ext}");
 //        List<String> matches = matcher.matches("/exampleNamespace/example.action");

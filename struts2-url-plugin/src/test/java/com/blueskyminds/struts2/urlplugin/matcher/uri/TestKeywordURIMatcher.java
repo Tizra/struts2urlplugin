@@ -1,6 +1,9 @@
 package com.blueskyminds.struts2.urlplugin.matcher.uri;
 
-import junit.framework.TestCase;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
 import com.blueskyminds.struts2.urlplugin.configuration.URIPattern;
 import com.blueskyminds.struts2.urlplugin.utils.ComponentURI;
 import com.blueskyminds.struts2.urlplugin.matcher.uri.keyword.KeywordURIMatcher;
@@ -13,18 +16,12 @@ import com.blueskyminds.struts2.urlplugin.matcher.MatchContext;
  * <p/>
  * History:
  */
-public class TestKeywordURIMatcher extends TestCase {
+public class TestKeywordURIMatcher {
 
-    private KeywordURIMatcher uriMatcher;
-    private MatchContext matchContext;
+    private KeywordURIMatcher uriMatcher = new KeywordURIMatcher();
+    private MatchContext matchContext = new MatchContext();
 
-    protected void setUp() throws Exception {
-        super.setUp();
-
-        uriMatcher = new KeywordURIMatcher();
-        matchContext = new MatchContext();
-    }
-
+    @Test
     public void testMatch() {
         URIPattern uriPattern = new URIPattern("1", "keyword", "GET", "namespace/action[ext]");
         assertTrue(uriMatcher.matchesPath(new ComponentURI("get", "/exampleNamespace/example.action", null), uriPattern, matchContext));

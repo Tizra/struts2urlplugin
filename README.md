@@ -1,4 +1,4 @@
-﻿# Struts2 url plugin prerelease
+# Struts2 url plugin prerelease
 
 ([Official project page](https://code.google.com/p/struts2urlplugin/))
 
@@ -22,8 +22,8 @@ This builds on jitpack.io, for example:
 <dependency>
     <groupId>com.github.tizra</groupId>
     <artifactId>struts2urlplugin</artifactId>
-    <version>0.1-tizra.2</version>
+    <version>0.1-tizra.12</version>
 </dependency>
 ```
 
-Note that you have to create a tag 0.1-tizra.2 (or whatever, to name the version of the resulting build.)
+Note that you have to create a tag 0.1-tizra.13 (or whatever, to name the version of the resulting build.)
