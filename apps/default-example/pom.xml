@@ -5,7 +5,7 @@
   <groupId>com.blueskyminds.struts2.urlplugin</groupId>
   <artifactId>default-example</artifactId>
   <packaging>war</packaging>
-  <version>0.1-tizra.12</version>
+  <version>0.1-tizra.13</version>
   <name>Example Struts2 WebApp with default URL settings</name>
 
   <parent>
@@ -18,13 +18,13 @@
    <dependency>
       <groupId>org.apache.struts</groupId>
       <artifactId>struts2-core</artifactId>
-      <version>6.3.0.2</version>
+      <version>6.4.0</version>
     </dependency>
 
     <dependency>
       <groupId>com.blueskyminds.struts2</groupId>
       <artifactId>struts2-url-plugin</artifactId>
-      <version>0.1-tizra.12</version>
+      <version>0.1-tizra.13</version>
     </dependency>
   </dependencies>
 </project>

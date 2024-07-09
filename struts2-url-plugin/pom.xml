@@ -5,7 +5,7 @@
 <groupId>com.blueskyminds.struts2</groupId>
 <artifactId>struts2-url-plugin</artifactId>
 <packaging>jar</packaging>
-<version>0.1-tizra.12</version>
+<version>0.1-tizra.13</version>
 <name>Struts2 URL Plugin</name>
 <url>http://www.blueskyminds.com.au</url>
 
@@ -21,7 +21,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-                <version>3.12.1</version>
+                                <version>3.12.1</version>
 				<configuration>
 					<encoding>${project.build.sourceEncoding}</encoding>
 					<source>${maven.compiler.source}</source>
@@ -91,7 +91,7 @@
 	<dependency>
 	  <groupId>org.apache.struts</groupId>
 	  <artifactId>struts2-core</artifactId>
-	  <version>6.3.0.2</version>
+	  <version>6.4.0</version>
 	</dependency>
 
     <dependency>
