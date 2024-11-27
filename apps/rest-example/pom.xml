@@ -34,7 +34,7 @@
     <dependency>
       <groupId>com.blueskyminds.struts2</groupId>
       <artifactId>struts2-url-plugin</artifactId>
-      <version>0.1-tizra.14</version>
+      <version>0.1-tizra.15</version>
     </dependency>
   </dependencies>
 

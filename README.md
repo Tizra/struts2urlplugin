@@ -22,8 +22,8 @@ This builds on jitpack.io, for example:
 <dependency>
     <groupId>com.github.tizra</groupId>
     <artifactId>struts2urlplugin</artifactId>
-    <version>0.1-tizra.14</version>
+    <version>0.1-tizra.15</version>
 </dependency>
 ```
 
-Note that you have to create a tag 0.1-tizra.15 (or whatever, to name the version of the resulting build.)
+Note that you have to create a tag 0.1-tizra.16 (or whatever, to name the version of the resulting build.)
