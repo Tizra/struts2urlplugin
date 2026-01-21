@@ -38,13 +38,13 @@ public class KeywordPatternMatcher implements PatternMatcher {
     private static final Set<Pattern> SEPARATORS;
 
     static {
-        PATTERNS = new HashMap<String, PatternSpec>();
+        PATTERNS = new HashMap<>();
         PATTERNS.put("namespace", NAMESPACE);
         PATTERNS.put("action", SLURP_TEXT);
         PATTERNS.put("[ext]", OPTIONAL_EXTENSION);
         PATTERNS.put("id", SLURP_TEXT);
 
-        SEPARATORS = new HashSet<Pattern>();
+        SEPARATORS = new HashSet<>();
         for (String key : PATTERNS.keySet()) {
             SEPARATORS.add(Pattern.compile(escapeForRegEx(key)));
         }
@@ -55,7 +55,7 @@ public class KeywordPatternMatcher implements PatternMatcher {
 
 
     public KeywordPatternMatcher(String keywordPattern) {
-        keywordGroupMap = new HashMap<String, Integer>();
+        keywordGroupMap = new HashMap<>();
         
         if (keywordPattern != null) {
             this.regExPattern = Pattern.compile(convertToRegEx(keywordPattern));

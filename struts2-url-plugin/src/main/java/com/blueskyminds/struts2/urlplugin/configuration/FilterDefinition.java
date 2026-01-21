@@ -12,7 +12,7 @@ public class FilterDefinition {
     private Map<String, String> parameters;
 
     public FilterDefinition() {
-        parameters = new HashMap<String, String>();
+        parameters = new HashMap<>();
     }
 
     public String getName() {

@@ -23,7 +23,7 @@ public class SampleOriginalActionMapConfiguration implements ActionMapConfigurat
     }
 
     private void init() {
-        actionMapDefinitions = new LinkedList<ActionMapDefinition>();
+        actionMapDefinitions = new LinkedList<>();
 
         ActionMapDefinition jsonMapping = new ActionMapDefinition("default");
         URIPattern pattern1 = new URIPattern("1", "regex", ".*", "^(.+)/(.*)\\.action$");
@@ -68,6 +68,6 @@ public class SampleOriginalActionMapConfiguration implements ActionMapConfigurat
      * @return
      */
     public Map<String, String> getContext() {
-        return new HashMap<String, String>();
+        return new HashMap<>();
     }
 }

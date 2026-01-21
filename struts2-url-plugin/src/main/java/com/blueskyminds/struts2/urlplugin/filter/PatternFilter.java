@@ -16,7 +16,7 @@ public class PatternFilter implements RequestFilter {
     private Pattern pattern;
 
     public PatternFilter() {
-        params = new HashMap<String, String>();
+        params = new HashMap<>();
     }
 
     /**

@@ -1,7 +1,7 @@
 package com.blueskyminds.struts2.urlplugin.configuration;
 
-import java.util.List;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Contains a mapping of URIPattern's to one or more action selectors
@@ -22,8 +22,8 @@ public class ActionMapDefinition {
     }
 
     private void init() {
-        patterns = new LinkedList<URIPattern>();
-        actionSelectors = new LinkedList<ActionSelector>();
+        patterns = new LinkedList<>();
+        actionSelectors = new LinkedList<>();
     }
 
     public String getId() {

@@ -129,7 +129,7 @@ public class URLPatternActionMapper implements ActionMapper {
 
         if (uriMatcherProvider == null) {
             // use the Container as a provider of URIMatchers
-            uriMatcherProvider = new MatcherProvider<URIMatcher>() {
+            uriMatcherProvider = new MatcherProvider<>() {
                 public URIMatcher getMatcher(String name) {
                     return container.getInstance(URIMatcher.class, name);
                 }
@@ -252,7 +252,7 @@ public class URLPatternActionMapper implements ActionMapper {
         if ((properties != null) && (properties.size() > 0)) {
             Map<String, Object> params = actionMapping.getParams();
             if (params == null) {
-                actionMapping.setParams(new HashMap<String, Object>(properties));
+                actionMapping.setParams(new HashMap<>(properties));
             } else {
                 params.putAll(properties);
             }

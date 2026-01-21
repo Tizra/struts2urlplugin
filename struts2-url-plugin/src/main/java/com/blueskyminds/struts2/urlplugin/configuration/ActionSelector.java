@@ -34,7 +34,7 @@ public class ActionSelector {
         this.actionMatcher = actionMatcher;
         this.name = name;
         this.method = method;
-        this.params = new HashMap<String, String>();
+        this.params = new HashMap<>();
     }
 
     /**
@@ -48,11 +48,11 @@ public class ActionSelector {
         this.namespace = namespace;
         this.name = name;
         this.method = method;
-        this.params = new HashMap<String, String>();
+        this.params = new HashMap<>();
     }
 
     public ActionSelector() {
-        this.params = new HashMap<String, String>();
+        this.params = new HashMap<>();
     }
 
     public String getNamespaceMatcher() {
@@ -122,7 +122,7 @@ public class ActionSelector {
      * @return
      */
     public Map<String, String> evaluateParams(MatchContext matchContext) {
-        Map<String, String> result = new HashMap<String, String>();
+        Map<String, String> result = new HashMap<>();
         for (Map.Entry<String, String> entry : params.entrySet()) {
             result.put(entry.getKey(), matchContext.evaluateExpression(entry.getValue()));
         }

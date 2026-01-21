@@ -19,7 +19,7 @@ public class RegExPatternMatcherFactory implements PatternMatcherFactory {
     private Map<String, PatternMatcher> cachedMatchers;
 
     public RegExPatternMatcherFactory() {
-        cachedMatchers = new ConcurrentHashMap<String, PatternMatcher>(200, 0.85f, 32);
+        cachedMatchers = new ConcurrentHashMap<>(200, 0.85f, 32);
     }
 
     /** Gets a complied RegEx pattern */

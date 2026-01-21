@@ -27,9 +27,9 @@ public class MatchContext {
     private Map<String, String> properties;
 
     public MatchContext() {
-        params = new HashMap<String, String>();
-        groups = new ArrayList<String>(10);
-        properties = new HashMap<String, String>();
+        params = new HashMap<>();
+        groups = new ArrayList<>(10);
+        properties = new HashMap<>();
         expressionProcessor = new ExpressionProcessor(new MatchContextExpressionListener(this));
     }
 
@@ -86,7 +86,7 @@ public class MatchContext {
      * @return a new instance of the map of properties and the values
      * */
     public Map<String, String> evaluateProperties() {
-        Map<String, String> result = new HashMap<String, String>();
+        Map<String, String> result = new HashMap<>();
         for (Map.Entry<String, String> entry : properties.entrySet()) {
             result.put(entry.getKey(), expressionProcessor.evaluate(entry.getValue()));
         }

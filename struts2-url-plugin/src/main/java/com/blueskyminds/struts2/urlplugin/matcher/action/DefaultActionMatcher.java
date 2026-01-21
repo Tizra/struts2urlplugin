@@ -165,7 +165,7 @@ public class DefaultActionMatcher implements ActionMatcher {
     private void setupConfiguration() {
      if (container != null) {
             if (namespaceMatcherProvider == null) {
-                namespaceMatcherProvider = new MatcherProvider<NamespaceMatcher>() {
+                namespaceMatcherProvider = new MatcherProvider<>() {
                     public NamespaceMatcher getMatcher(String id) {
                         return container.getInstance(NamespaceMatcher.class, id);
                     }
@@ -173,7 +173,7 @@ public class DefaultActionMatcher implements ActionMatcher {
             }
 
          if (actionMatcherProvider == null) {
-                actionMatcherProvider = new MatcherProvider<ActionNameMatcher>() {
+                actionMatcherProvider = new MatcherProvider<>() {
                     public ActionNameMatcher getMatcher(String id) {
                         return container.getInstance(ActionNameMatcher.class, id);
                     }

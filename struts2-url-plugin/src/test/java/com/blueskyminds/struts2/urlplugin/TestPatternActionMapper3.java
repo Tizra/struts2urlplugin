@@ -45,13 +45,13 @@ public class TestPatternActionMapper3 {
         ((XMLActionMapConfiguration) actionMapConfiguration).setConfiguration("struts-test3-urls.xml");
 
         //setup the MatcherProvider.  The matchers control how to match an ActionConfig
-        actionMatcherProvider = new MockMatcherProvider<ActionNameMatcher>();
+        actionMatcherProvider = new MockMatcherProvider<>();
         actionMatcherProvider.addMatcher(PlainTextActionNameMatcher.DEFAULT_NAME, new PlainTextActionNameMatcher());
 
-        namespaceMatcherProvider = new MockMatcherProvider<NamespaceMatcher>();
+        namespaceMatcherProvider = new MockMatcherProvider<>();
         namespaceMatcherProvider.addMatcher(PlainTextNamespaceMatcher.DEFAULT_NAME, new PlainTextNamespaceMatcher());
 
-        uriMatcherProvider = new MockMatcherProvider<URIMatcher>();
+        uriMatcherProvider = new MockMatcherProvider<>();
         uriMatcherProvider.addMatcher(RegExURIMatcher.DEFAULT_NAME, new RegExURIMatcher());
         uriMatcherProvider.addMatcher(DefaultURIMatcher.DEFAULT_NAME, new DefaultURIMatcher());
         uriMatcherProvider.addMatcher(KeywordURIMatcher.DEFAULT_NAME, new KeywordURIMatcher());

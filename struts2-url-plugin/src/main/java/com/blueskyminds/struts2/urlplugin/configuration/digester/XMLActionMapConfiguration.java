@@ -34,8 +34,8 @@ public class XMLActionMapConfiguration implements ActionMapConfiguration {
     private FilterDefinition filterDefinition;
 
     public XMLActionMapConfiguration() {        
-        actionMappings = new LinkedList<ActionMapDefinition>();
-        initialContext = new HashMap<String, String>();
+        actionMappings = new LinkedList<>();
+        initialContext = new HashMap<>();
     } 
 
     public boolean readConfiguration(InputStream inputStream) {

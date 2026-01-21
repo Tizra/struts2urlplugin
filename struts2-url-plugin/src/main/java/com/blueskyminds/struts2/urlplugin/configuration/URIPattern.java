@@ -26,11 +26,11 @@ public class URIPattern {
         this.type = type;
         this.method = method;
         this.path = path;
-        this.params = new HashMap<String, String>();
+        this.params = new HashMap<>();
     }
 
     public URIPattern() {
-        this.params = new HashMap<String, String>();
+        this.params = new HashMap<>();
     }
 
     public String getId() {
