@@ -22,8 +22,11 @@ This builds on jitpack.io, for example:
 <dependency>
     <groupId>com.github.tizra</groupId>
     <artifactId>struts2urlplugin</artifactId>
-    <version>0.1-tizra.19</version>
+    <version>0.1-tizra.20</version>
 </dependency>
 ```
 
-Note that you have to create a tag 0.1-tizra.19 (or whatever, to name the version of the resulting build.)
+Note that you have to create a tag 0.1-tizra.21 (or whatever, to name the version of the resulting build.)
+
+*Note*: as of October 2026, Jitpack.io uses Maven 3.2.5. We cannot upgrade any Maven plugins in this build
+until Jitpack uses a newer version of Maven (or we change the build tool).
