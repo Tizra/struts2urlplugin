@@ -22,7 +22,7 @@ This builds on jitpack.io, for example:
 <dependency>
     <groupId>com.github.tizra</groupId>
     <artifactId>struts2urlplugin</artifactId>
-    <version>0.1-tizra.18</version>
+    <version>0.1-tizra.19</version>
 </dependency>
 ```
 
